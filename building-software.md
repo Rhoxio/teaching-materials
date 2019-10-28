@@ -45,15 +45,6 @@ Each of these user stories comes with their own nuance and implications, but we 
 
 Now that we have the basic skeleton of expectation laid out, we can start looking at what it's actually going to take to get this app up and running.
 
-For example, having a user upload a photo is actually fairly complicated:
-- For User photo uploads to work:
-	- Carrierwave must be set up correctly for HTTP
-	- S3 bucket must be created
-	- S3 bucket permissions must be set
-	- UI for  photo uploads should be built (this should be a whole new item in and of itself)
-	- Users must be able to delete photos
-	- They must be able to set a 'default' photo
-
 Write this all out and get a good idea of what it's going to take to get your features out of your head and into reality. Try to cover as many bases as you can in this step, because the moment you begin to think about estimating time you may find that some features will either take a very long time or need more research before you can execute well on them. 
 
 Now that you have all of your thoughts and concerns down, it is time to start estimating how much work it'll be to actually build the thing out. 
@@ -88,5 +79,14 @@ Now that you have a list of actions, nouns, and expectations about the app as a 
 Do your best to itemize each piece, but don't feel bad if you have no idea how long something will take. A good starting point for junior developers is 8-12 hours per related feature set (how you grouped them naturally), 8 hours for a mid-level, and 4 for a senior proficient in the language. Time spent is VERY dependent on the task at hand and is by no means a static guideline - just a suggestion to base your expectations on. If you really are not sure, overestimate by a little bit as you will rarely find a time when you can simply build something and have it run perfectly - in fact it will probably almost never happen unless you are super familiar with the tools you are working with already. Sometimes sticky bugs come up, so adding an hour or two on to something you are unfamiliar with is perfectly acceptable.
 
 Most tasks should be broken down into 3-4 hour blocks, but large or key features are going to take longer to get right. If you find you are having to guesstimate too much, try pulling back and breaking that item down into more parts. Most of the time, there are multiple complicated steps that need to be taken to even get a single feature working on a basic level.
+
+For example, having a user upload a photo is actually fairly complicated:
+- For User photo uploads to work:
+	- Carrierwave must be set up correctly for HTTP
+	- S3 bucket must be created
+	- S3 bucket permissions must be set
+	- UI for  photo uploads should be built (this should be a whole new item in and of itself)
+	- Users must be able to delete photos
+	- They must be able to set a 'default' photo
 
 > Written with [StackEdit](https://stackedit.io/).
