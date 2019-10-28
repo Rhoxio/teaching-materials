@@ -60,7 +60,7 @@ Now that you have all of your thoughts and concerns down, it is time to start es
 
 ## Scoping
 
- Now that we have some basic ideas down, now it is time to extrapolate and list out what it is going to take to get each user story come to life. Start with the basics like user account creation, as the whole app relies on individual users being able to do some set of things. Something like this will suffice:
+Now it is time to extrapolate and list out what it is going to take to get each user story come to life! Start with the basics like user account creation, as the whole app relies on individual users being able to do some set of things. Something like this will suffice:
   - For users to sign up:
 	  - Devise will need to be used for authentication and account creation. 
 	  - Users will need to have attributes like location, name, description, and height.
@@ -73,20 +73,20 @@ Now that you have all of your thoughts and concerns down, it is time to start es
 
 As you can see, this starts to get complicated. Just by listing what our User needs, we have inadvertently created expectations that the other data will be linked to our User in some way. The goal of this phase is to eliminate confusion about how everything should tie together in the long run and to establish how we expect the data to flow. Get as granular as you can with it without laying out specifics about implementation, as we are trying to refine the idea as opposed to worrying about engineering solutions right now.
 
-What we are doing is identifying problem areas and potential complexity. We don't want to implement features that have low impact but take a lot of time to build (like the 'record a bark' feature) may not be suited for an initial build, but could be great ideas for later. Get it all down, as this is the time to do it because the moment you start writing code, it becomes much harder to change what's already been done! 
+If you are having issues figuring out how it will all be connected together, try making a UML diagram (check out [draw.io](https://www.draw.io/)) and create some visualizations to help you out. 
 
-Once you start to see how connections are laid out, make descriptions of the intermediary actions (actions between two nouns or models in your app) and lay out details about how it should be organized. Something like this will serve you well:
+What we are doing is identifying problem areas and potential complexity. We don't want to implement features that have low impact but take a lot of time to build (like the 'record a bark' feature) may not be suited for an initial build, but could be great ideas for later. Get it all down, as this is the time to do it because the moment you start writing code, it becomes much harder to change what's already been done as we have to create dependencies. If you can design for change by setting expectations in certain areas of the code, you can more efficiently implement these extra features later. 
+
+Once you start to see how connections are laid out between nouns (models) and verbs (actions, logic), you can make descriptions of the intermediary actions and data expectations to lay out details about how it should be designed. Something like this may serve you well:
 - Users -> Dogs, Users have many Dogs, but Dogs will only have one User through the table Owners.
 - Users -> Preferences, Users have one set of preferences that will control user filtration, IP settings, location settings, and other display settings.
 - Users -> Photos, Users have many Photos and Photos have only one User. 
 - Users -> Match, Users should be linked many-to-many with other users through the table Matches. 
 
-## Scoping
-
 Now that you have a list of actions, nouns, and expectations about the app as a whole, start picking through and giving each line item a time estimate. This will help you understand and delegate your time more efficiently, as a task like setting up a User model with Devise (1-2 hours) is much less involved than figuring out audio capture and storing that sound data on Amazon S3 or something (12-15 hours if you need to do research), not to mention getting it to play back at the tap of a button (2-3 hours).
 
-Do your best to itemize each piece, but don't feel bad if you have no idea how long something will take. A good starting point for junior developers is 8 hours per feature, 6 hours for a mid-level, and 3-4 for a senior proficient in the language. If you really are not sure, overestimate by a little bit as you will rarely find a time when you can simply build something and have it run perfectly - in fact that almost never happens. Sometimes sticky bugs come up, so adding an hour or two on something you are unfamiliar with is perfectly acceptable.
+Do your best to itemize each piece, but don't feel bad if you have no idea how long something will take. A good starting point for junior developers is 8-12 hours per related feature set (how you grouped them naturally), 8 hours for a mid-level, and 4 for a senior proficient in the language. Time spent is VERY dependent on the task at hand and is by no means a static guideline - just a suggestion to base your expectations on. If you really are not sure, overestimate by a little bit as you will rarely find a time when you can simply build something and have it run perfectly - in fact it will probably almost never happen unless you are super familiar with the tools you are working with already. Sometimes sticky bugs come up, so adding an hour or two on to something you are unfamiliar with is perfectly acceptable.
 
-Most tasks should be broken down into 3-4 hour blocks, but large or key features are perfectly fine taking much more time. If you find you are having to estimate too much, try pulling back and breaking that item down into more base parts. Most of the time, there are multiple complicated steps that need to be taken to even get a single feature working on a basic level.
+Most tasks should be broken down into 3-4 hour blocks, but large or key features are going to take longer to get right. If you find you are having to guesstimate too much, try pulling back and breaking that item down into more parts. Most of the time, there are multiple complicated steps that need to be taken to even get a single feature working on a basic level.
 
 > Written with [StackEdit](https://stackedit.io/).
