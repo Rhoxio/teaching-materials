@@ -45,6 +45,19 @@ Each of these user stories comes with their own nuance and implications, but we 
 
 Now that we have the basic skeleton of expectation laid out, we can start looking at what it's actually going to take to get this app up and running.
 
+For example, having a user upload a photo is actually fairly complicated:
+- For User photo uploads to work:
+	- Carrierwave must be set up correctly for HTTP
+	- S3 bucket must be created
+	- S3 bucket permissions must be set
+	- UI for  photo uploads should be built (this should be a whole new item in and of itself)
+	- Users must be able to delete photos
+	- They must be able to set a 'default' photo
+
+Write this all out and get a good idea of what it's going to take to get your features out of your head and into reality. Try to cover as many bases as you can in this step, because the moment you begin to think about estimating time you may find that some features will either take a very long time or need more research before you can execute well on them. 
+
+Now that you have all of your thoughts and concerns down, it is time to start estimating how much work it'll be to actually build the thing out. 
+
 ## Scoping
 
  Now that we have some basic ideas down, now it is time to extrapolate and list out what it is going to take to get each user story come to life. Start with the basics like user account creation, as the whole app relies on individual users being able to do some set of things. Something like this will suffice:
@@ -67,6 +80,8 @@ Once you start to see how connections are laid out, make descriptions of the int
 - Users -> Preferences, Users have one set of preferences that will control user filtration, IP settings, location settings, and other display settings.
 - Users -> Photos, Users have many Photos and Photos have only one User. 
 - Users -> Match, Users should be linked many-to-many with other users through the table Matches. 
+
+## Scoping
 
 Now that you have a list of actions, nouns, and expectations about the app as a whole, start picking through and giving each line item a time estimate. This will help you understand and delegate your time more efficiently, as a task like setting up a User model with Devise (1-2 hours) is much less involved than figuring out audio capture and storing that sound data on Amazon S3 or something (12-15 hours if you need to do research), not to mention getting it to play back at the tap of a button (2-3 hours).
 
